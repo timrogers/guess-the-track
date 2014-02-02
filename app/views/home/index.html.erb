@@ -1,0 +1,33 @@
+<div class="container">
+  <h3>How well do you know your favorite rapper?</h3>
+
+  <p>Enter an artist's Rap Genius ID. <i>You can find it by heading to their artist page and hovering over the "Follow" button - it'll be a number in the URL.</i></p>
+
+  <%= form_tag("/artists", method: "get", role: "form") do %>
+    <div class="form-group">
+      <%= label_tag(:id, "Artist ID") %>
+      <%= text_field_tag(:id, nil, class: "form-control") %>
+    </div>
+
+    <%= submit_tag("Go", class: "btn btn-primary btn-block") %>
+  <% end %>
+
+  <br />
+  <p>Or choose a popular artist:</p>
+
+  <%= link_to "Drake", artist_path(130), class: "btn btn-default btn-block" %>
+  <%= link_to "Jay Z", artist_path(2), class: "btn btn-default btn-block" %>
+  <%= link_to "Kanye West", artist_path(72), class: "btn btn-default btn-block" %>
+  <%= link_to "A$AP Rocky", artist_path(12417), class: "btn btn-default btn-block" %>
+  <%= link_to "Kendrick Lamar", artist_path(1421), class: "btn btn-default btn-block" %>
+
+  <hr />
+
+  <p class="text-center">
+    <i>
+      A game created by <a href="http://timrogers.co.uk">Tim Rogers</a> as an
+      example of the <a href="https://github.com/timrogers/rapgenius">rapgenius
+      Ruby gem.
+    </i>
+  </p>
+</div>

@@ -1,0 +1,44 @@
+<%= content_for(:artist) do %>
+  <% @artist.name %>
+<% end %>
+
+<div class="container">
+  <% if flash[:notice] %>
+    <div class="alert alert-success">
+      <strong>Nice one!</strong>
+      <%= flash[:notice].html_safe %>
+    </div>
+  <% elsif flash[:alert] %>
+    <div class="alert alert-danger">
+      <strong>Oops!</strong>
+      <%= flash[:alert].html_safe %>
+    </div>
+  <% end %>
+
+  <h3>Which <%= @artist.name %> track is this line from?</h3>
+
+  <div class="well" style="margin: 1em auto;">
+    <%= @correct_lyric.lyric %>
+  </div>
+
+  <div class="list-group">
+    <% @songs_to_guess_from.each do |song| %>
+      <div class="list-group-item">
+        <h4 class="list-group-item-heading">
+          <%= link_to song.title, answer_artist_path(params[:id], song_id: song.id) %>
+        </h4>
+
+        <% if song.featured_artists.any? %>
+          <p class="list-group-item-text">
+            featuring <%= song.featured_artists.map(&:name).to_sentence %>
+          </p>
+        <% end %>
+
+        <p class="list-group-item-text">
+          <small><%= link_to "View this track on Rap Genius", song.url %></small>
+        </p>
+      </div>
+    <% end %>
+</div>
+
+</div>
