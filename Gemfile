@@ -46,6 +46,6 @@ gem 'unicorn'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'rapgenius', '~> 1.0.2'
+gem 'rapgenius', '~> 1.0.3'
 gem 'bootstrap-sass', '~> 3.1.0'
 gem 'rails_12factor', group: :production

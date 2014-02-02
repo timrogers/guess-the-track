@@ -84,7 +84,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.12.0)
     rake (10.1.1)
-    rapgenius (1.0.2)
+    rapgenius (1.0.3)
       httparty (~> 0.11.0)
     rdoc (4.1.1)
       json (~> 1.4)
@@ -133,7 +133,7 @@ DEPENDENCIES
   pg
   rails (= 4.0.0)
   rails_12factor
-  rapgenius (~> 1.0.2)
+  rapgenius (~> 1.0.3)
   sass-rails (~> 4.0.0)
   sdoc
   sqlite3
