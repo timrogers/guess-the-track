@@ -2,7 +2,7 @@
 
 A game built in Ruby on Rails as an example of the open source [rapgenius gem](https://github.com/timrogers/rapgenius).
 
-## [Try it now](https://guess-the-track.herokuapp.com)
+__[Try it now](https://guess-the-track.herokuapp.com)__
 
 ![Screenshot](http://i.imgur.com/8vFa8Le.png)
 
