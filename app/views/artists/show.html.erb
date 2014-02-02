@@ -15,6 +15,10 @@
     </div>
   <% end %>
 
+  <% if @artist.image %>
+    <img src="<%= @artist.image %>" class="img-responsive" alt="<%= @artist.name %>" />
+  <% end %>
+
   <h3>Which <%= @artist.name %> track is this line from?</h3>
 
   <div class="well" style="margin: 1em auto;">

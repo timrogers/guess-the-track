@@ -1,19 +1,13 @@
 <div class="container">
-  <h3>How well do you know your favorite rapper?</h3>
+  <h2>How well do you know your favorite rapper?</h2><br />
 
-  <p>Enter an artist's Rap Genius ID. <i>You can find it by heading to their artist page and hovering over the "Follow" button - it'll be a number in the URL.</i></p>
+  <p>Rap Genius has lyrics for virtually every rap song in existence, so their data is <i>perfect</i> for building a game to test your musical knowledge ;)</p>
 
-  <%= form_tag("/artists", method: "get", role: "form") do %>
-    <div class="form-group">
-      <%= label_tag(:id, "Artist ID") %>
-      <%= text_field_tag(:id, nil, class: "form-control") %>
-    </div>
+  <p><strong>First, find an artist's Rap Genius ID.</strong> You can find it by heading to their artist page and hovering over the "Follow" button - there'll be a number in the URL.</p>
 
-    <%= submit_tag("Go", class: "btn btn-primary btn-block") %>
-  <% end %>
+  <p>Next, head to <strong><span class="text-primary">https://guess-the-track.herokuapp.com/artists/&lt;ID&gt;</span></strong> to start playing.</p>
 
-  <br />
-  <p>Or choose a popular artist:</p>
+  <p>Alternatively, simply choose a popular artist:</p>
 
   <%= link_to "Drake", artist_path(130), class: "btn btn-default btn-block" %>
   <%= link_to "Jay Z", artist_path(2), class: "btn btn-default btn-block" %>
@@ -25,9 +19,9 @@
 
   <p class="text-center">
     <i>
-      A game created by <a href="http://timrogers.co.uk">Tim Rogers</a> as an
-      example of the <a href="https://github.com/timrogers/rapgenius">rapgenius
-      Ruby gem.
+      Created by <a href="http://timrogers.co.uk">Tim Rogers</a> using his
+      open source <a href="https://github.com/timrogers/rapgenius">rapgenius
+      gem.
     </i>
   </p>
 </div>
